@@ -1,0 +1,67 @@
+\documentclass{article}
+
+\usepackage[landscape, margin=0.5cm]{geometry}
+
+\usepackage{array}
+%\usepackage{booktabs}
+
+\newcommand{\bw}{80mm}
+\newcommand{\lw}{30mm}
+\newcommand{\sw}{50mm}
+
+\newcommand{\accountrow}{
+				\vspace{4pt}
+				\begin{center}
+								\large Start: \$\underline{\hspace{\lw}}
+				\end{center} %\newline 
+				\begin{center}
+								\large End: \hspace{0.5pt} \$\underline{\hspace{\lw}}
+				\end{center}	
+				\vspace{2pt}
+}
+
+\renewcommand{\arraystretch}{4}
+
+%\setlength{\abovetopsep}{4pt}
+
+\begin{document}
+\begin{center} 
+  \begin{tabular}{ | m{30mm} | m{\bw} | m{30mm} | m{\bw} | }
+	  \hline 
+		\multicolumn{2}{|c|}{\huge Checkings} & 
+		\multicolumn{2}{c|}{\huge Savings} \\
+		\hline
+		\LARGE \centering{ Kristen } & 
+	  \vspace{4pt}
+		\accountrow &
+		\LARGE \centering{ Kristen } & 
+		\accountrow \\
+		\hline 
+		\LARGE \centering{ Jerome } & 
+		\accountrow & 
+		\LARGE \centering{ Jerome } & 
+		\accountrow \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{ | m{125mm} | m{50mm} | m{50mm} | }
+		\hline
+    \multicolumn{3}{|c|}{\huge Savings Goals} \\
+		\hline
+		\LARGE Name/Description & \LARGE Monthly Goal & \LARGE Amount Met
+		\\ \hline
+								& & \\
+								\hline 
+								& & \\
+								\hline 
+								& & \\
+								\hline 
+								& & \\
+								\hline
+								& & \\
+								\hline 
+  \end{tabular}
+\end{center}
+\end{document}

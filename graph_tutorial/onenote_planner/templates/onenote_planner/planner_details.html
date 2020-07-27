@@ -1,0 +1,15 @@
+{% extends "tutorial/layout.html" %}
+{% block content %}
+<h1>Calendar</h1>
+<table class="table">
+	<tbody>
+		{% if notebook_result %}
+		{% for event in notebook_result %}
+		<tr>
+			<td>{{ event }}</td>
+		</tr>
+		{% endfor %}
+		{% endif %}
+	</tbody>
+</table>
+{% endblock %}

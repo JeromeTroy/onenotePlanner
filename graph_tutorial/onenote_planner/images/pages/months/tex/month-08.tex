@@ -1,0 +1,210 @@
+\documentclass{article}
+
+% packages
+\usepackage[landscape, a4paper, margin=0.5cm]{geometry} % Page dimensions and margins
+\usepackage{palatino} % Use the Palatino font
+\usepackage{xifthen}
+\usepackage{intcalc}
+\usepackage[table]{xcolor}
+\usepackage{background}
+
+\definecolor{bannercolor}{HTML}{4373BF}
+\definecolor{weekendcolor}{HTML}{7EA5D4}
+
+\backgroundsetup{
+	scale=1,
+	color=black,
+	opacity=0.9,
+	angle=0,
+	contents={%
+	  \includegraphics[width=\paperwidth,height=\paperheight]{../../../backgrounds/month-view-background.pdf}
+	}%
+}
+
+% size of day blocks
+\newcommand{\daysize}{2.5cm}		% height
+\newcommand{\dw}{3.5cm}					% width
+
+% building a day block
+\newcommand{\mkday}[1]{
+  #1
+  \vspace{\daysize}
+}
+
+% ---------------------------------------------------------------------------- %
+
+
+\begin{document}
+
+% display the month and year
+		\begin{center}
+			\textsc{\LARGE \textbf{\textcolor{black}{
+			August
+			}}}\\ % Month
+			\textsc{\large \textbf{\textcolor{black}{
+			2020
+			}}} % Year
+		\end{center}
+
+		% legend for days of the week
+		\begin{center}
+		\begin{tabular}{| p{\dw} | p{\dw} | p{\dw} | p{\dw} | p{\dw} | p{\dw} | p{\dw} |}
+			\hline
+			\cellcolor{bannercolor} \textcolor{white}{Sunday} &
+			\cellcolor{bannercolor} \textcolor{white}{Monday} &
+			\cellcolor{bannercolor} \textcolor{white}{Tuesday} &
+			\cellcolor{bannercolor} \textcolor{white}{Wednesday} &
+			\cellcolor{bannercolor} \textcolor{white}{Thursday} &
+			\cellcolor{bannercolor} \textcolor{white}{Friday} &
+			\cellcolor{bannercolor} \textcolor{white}{Saturday} \\
+			\hline
+		\end{tabular}
+
+		\vspace{0.1cm}
+
+		% building the calenday
+		\begin{tabular}{| p{\dw} | p{\dw} | p{\dw} | p{\dw} | p{\dw} | p{\dw} | p{\dw} |}
+\hline 
+\cellcolor{weekendcolor}\mkday{
+    26
+} & 
+\mkday{
+    27
+} &
+\mkday{
+    28
+} &
+\mkday{
+    29
+} &
+\mkday{
+    30
+} &
+\mkday{
+    31
+} &
+\cellcolor{weekendcolor}\mkday{
+    01
+} 
+\\
+\hline 
+\cellcolor{weekendcolor}\mkday{
+    02
+} & 
+\mkday{
+    03
+} &
+\mkday{
+    04
+} &
+\mkday{
+    05
+} &
+\mkday{
+    06
+} &
+\mkday{
+    07
+} &
+\cellcolor{weekendcolor}\mkday{
+    08
+} 
+\\
+\hline 
+\cellcolor{weekendcolor}\mkday{
+    09
+} & 
+\mkday{
+    10
+} &
+\mkday{
+    11
+} &
+\mkday{
+    12
+} &
+\mkday{
+    13
+} &
+\mkday{
+    14
+} &
+\cellcolor{weekendcolor}\mkday{
+    15
+} 
+\\
+\hline 
+\cellcolor{weekendcolor}\mkday{
+    16
+} & 
+\mkday{
+    17
+} &
+\mkday{
+    18
+} &
+\mkday{
+    19
+} &
+\mkday{
+    20
+} &
+\mkday{
+    21
+} &
+\cellcolor{weekendcolor}\mkday{
+    22
+} 
+\\
+\hline 
+\cellcolor{weekendcolor}\mkday{
+    23
+} & 
+\mkday{
+    24
+} &
+\mkday{
+    25
+} &
+\mkday{
+    26
+} &
+\mkday{
+    27
+} &
+\mkday{
+    28
+} &
+\cellcolor{weekendcolor}\mkday{
+    29
+} 
+\\
+\hline 
+\cellcolor{weekendcolor}\mkday{
+    30
+} & 
+\mkday{
+    31
+} &
+\mkday{
+    01
+} &
+\mkday{
+    02
+} &
+\mkday{
+    03
+} &
+\mkday{
+    04
+} &
+\cellcolor{weekendcolor}\mkday{
+    05
+} 
+\\
+		\end{tabular}
+
+		\end{center}
+
+
+\end{document}

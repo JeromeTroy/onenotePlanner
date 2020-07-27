@@ -1,0 +1,108 @@
+\documentclass[14pt]{article}
+
+% packages
+\usepackage[landscape, a4paper, margin=0.5cm,
+			paperwidth=300mm, paperheight=500mm]{geometry} % Page dimensions and margins
+
+\usepackage{palatino} % Use the Palatino font
+\usepackage{xifthen}
+\usepackage{intcalc}
+\usepackage[table]{xcolor}
+\usepackage{array}
+
+\usepackage{background}
+
+\backgroundsetup{
+	scale=1,
+	color=black,
+	opacity=0.9,
+	angle=0,
+	contents={
+	  \includegraphics[width=\paperwidth,height=\paperheight]{../../../backgrounds/week-view-background.pdf}
+	}%
+}
+
+\definecolor{bannercolor}{HTML}{4373BF}
+\definecolor{weekendcolor}{HTML}{7EA5D4}
+
+% size of day blocks
+\newcommand{\daysize}{0.8\textheight}		% height
+\newcommand{\cw}{60mm}					% width
+\newcommand{\lw}{40mm}
+\newcommand{\weekendsize}{0.385\textheight}
+
+% building a day block
+\newcommand{\mkday}[1]{
+  #1
+  \vspace{\daysize}
+}
+
+\newcommand{\mklines}{
+	\vspace{0.25cm}
+	\begin{center}
+	\underline{\hspace{\lw}}\newline
+	\underline{\hspace{\lw}}\newline 
+	\underline{\hspace{\lw}}\newline
+	\underline{\hspace{\lw}}\newline 
+	\underline{\hspace{\lw}}\newline 
+	\end{center}
+}
+
+
+\begin{document}
+
+
+% display the month and year
+		\begin{center}
+			\textsc{\huge 
+			Feb 23 - Feb 29
+			}\\ % Month
+			\vspace{0.5em}
+			\textsc{\LARGE 
+			2020
+			} % Year
+		\end{center}
+
+		\begin{center}
+		\begin{tabular}{ m{\cw} | m{\cw} | m{\cw} | m{\cw} | m{\cw} | m{\cw} | m{\cw} |}
+			 & \cellcolor{bannercolor}{\begin{center} \huge Appointments \end{center}} &
+			 \cellcolor{bannercolor}{\begin{center} \huge Work \end{center}} & 
+			 \cellcolor{bannercolor}{\begin{center} \huge Home \end{center}} 
+			 & \cellcolor{bannercolor}{\begin{center} \huge Social \end{center}}
+			 & \cellcolor{bannercolor}{\begin{center} \huge Writing/Learning \end{center}}
+			 & \cellcolor{bannercolor}{\begin{center} \huge Exercise \end{center}} \\
+			\hline
+						\cellcolor{weekendcolor}{\begin{center} \huge Sun. \end{center}} 
+						& \cellcolor{weekendcolor}{\mklines} 
+						& \cellcolor{weekendcolor}{\mklines} 
+						& \cellcolor{weekendcolor}{\mklines} 
+						&	\cellcolor{weekendcolor}{\mklines} 
+						& \cellcolor{weekendcolor}{\mklines} 
+						& \cellcolor{weekendcolor}{\mklines} \\
+			\hline
+						\cellcolor{bannercolor}{\begin{center} \huge Mon. \end{center}}
+						& \mklines & \mklines & \mklines & \mklines & \mklines & \mklines \\
+			\hline
+						\cellcolor{bannercolor}{\begin{center} \huge Tue. \end{center}} 
+						& \mklines & \mklines & \mklines & \mklines & \mklines & \mklines \\
+			\hline
+						\cellcolor{bannercolor}{\begin{center} \huge Wed. \end{center}} 
+						& \mklines & \mklines & \mklines & \mklines & \mklines & \mklines \\
+			\hline
+						\cellcolor{bannercolor}{\begin{center} \huge Thu. \end{center}} 
+						& \mklines & \mklines & \mklines &	\mklines & \mklines & \mklines \\
+			\hline
+						\cellcolor{bannercolor}{\begin{center} \huge Fri. \end{center}} 
+						& \mklines & \mklines & \mklines & \mklines & \mklines & \mklines \\
+			\hline 
+				\cellcolor{weekendcolor}{\begin{center} \huge Sat. \end{center}} 
+						& \cellcolor{weekendcolor}{\mklines} 
+						& \cellcolor{weekendcolor}{\mklines} 
+						& \cellcolor{weekendcolor}{\mklines} 
+						&	\cellcolor{weekendcolor}{\mklines} 
+						& \cellcolor{weekendcolor}{\mklines} 
+						& \cellcolor{weekendcolor}{\mklines} \\
+			\hline
+		\end{tabular}
+		\end{center}
+\end{document}

@@ -1,0 +1,106 @@
+{% extends "tutorial/layout.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Generate a Digital Planner</h1>
+  <p class="lead">Press the button below to generate a planner</p>
+  <a class="btn btn-primary btn-large {% if request.resolver_match.view_name == 'post_notebook' %} active{% endif %}" href="{% url 'post_notebook' %}">Click to generate notebook</a>
+  <p class="lead">Press the button below to generate a section</p>
+  <a class="btn btn-primary btn-large {% if request.resolver_match.view_name == 'post_sections' %} active{% endif %}" href="{% url 'post_sections' %}">Click to generate month sections</a>
+  <p class="lead">Press the button below to post month pages </p>
+  <a class="btn btn-primary btn-large {% if request.resolver_match.view_name == 'post_month_pages' %} active{% endif %}" href="{% url 'post_month_pages' %}">Click to generate month pages</a>
+  <p class="lead">Press the button below to post week view pages</p>
+  <a class="btn btn-primary btn-large {% if request.resolver_match.view_name == 'post_week_pages' %} active{% endif %}" href="{% url 'post_week_pages' %}">Click to generate week pages</a>
+  <p class="lead">Press the button below to post day view pages</p>
+  <a class="btn btn-primary btn-large {% if request.resolver_match.view_name == 'post_day_pages' %} active{% endif %}" href="{% url 'post_day_pages' %}">Click to generate day pages</a>
+  <h2>Building Months</h2>
+  <h3>Press a button below to generate a month section for the planner</h3>
+  <table style="width:100%">
+    <tr>
+      <td>
+        <a class="btn btn-primary btn-large
+          {% if request.resolver_match.view_name == 'post_january' %}
+          active{% endif %}" href="{% url 'post_january' %}"
+          style="width:200px">January</a>
+      </td>
+      <td>
+        <a class="btn btn-primary btn-large
+          {% if request.resolver_match.view_name == 'post_february' %}
+          active{% endif %}" href="{% url 'post_february' %}"
+          style="width:200px">February</a>
+      </td>
+      <td>
+        <a class="btn btn-primary btn-large
+          {% if request.resolver_match.view_name == 'post_march' %}
+          active{% endif %}" href="{% url 'post_march' %}"
+          style="width:200px">March</a>
+      </td>
+      <td>
+        <a class="btn btn-primary btn-large
+          {% if request.resolver_match.view_name == 'post_april' %}
+          active{% endif %}" href="{% url 'post_april' %}"
+          style="width:200px">April</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a class="btn btn-primary btn-large
+          {% if request.resolver_match.view_name == 'post_may' %}
+          active{% endif %}" href="{% url 'post_may' %}"
+          style="width:200px">May</a>
+      </td>
+      <td>
+        <a class="btn btn-primary btn-large
+          {% if request.resolver_match.view_name == 'post_june' %}
+          active{% endif %}" href="{% url 'post_june' %}"
+          style="width:200px">June</a>
+      </td>
+      <td>
+        <a class="btn btn-primary btn-large
+          {% if request.resolver_match.view_name == 'post_july' %}
+          active{% endif %}" href="{% url 'post_july' %}"
+          style="width:200px">July</a>
+      </td>
+      <td>
+        <a class="btn btn-primary btn-large
+          {% if request.resolver_match.view_name == 'post_august' %}
+          active{% endif %}" href="{% url 'post_august' %}"
+          style="width:200px">August</a>
+      </td>
+    </tr>
+      <td>
+        <a class="btn btn-primary btn-large
+          {% if request.resolver_match.view_name == 'post_september' %}
+          active{% endif %}" href="{% url 'post_september' %}  "
+          style="width:200px">September</a>
+      </td>
+      <td>
+        <a class="btn btn-primary btn-large
+          {% if request.resolver_match.view_name == 'post_october' %}
+          active{% endif %}" href="{% url 'post_october' %}"
+          style="width:200px">October</a>
+      </td>
+      <td>
+        <a class="btn btn-primary btn-large
+          {% if request.resolver_match.view_name == 'post_november' %}
+          active{% endif %}" href="{% url 'post_november' %}"
+          style="width:200px">November</a>
+      </td>
+      <td>
+        <a class="btn btn-primary btn-large
+          {% if request.resolver_match.view_name == 'post_december' %}
+          active{% endif %}" href="{% url 'post_december' %}"
+          style="width:200px">December</a>
+      </td>
+    </tr>
+  </table>
+
+  <p class="lead">Press the button below to list all planners</p>
+  <a class="btn btn-primary btn-large {% if request.resolver_match.view_name == 'get_planner' %} active{% endif %}" href="{% url 'get_planner' %}">Click to list all planners </a>
+  <p class="lead">Press the button below to list all section in planner</p>
+  <a class="btn btn-primary btn-large {% if request.resolver_match.view_name == 'get_sections' %} active{% endif %}" href="{% url 'get_sections' %}">Click to list all planner sections </a>
+  <p class="lead">Press the button below to list all pages in planner</p>
+  <a class="btn btn-primary btn-large {% if request.resolver_match.view_name == 'get_pages' %} active{% endif %}" href="{% url 'get_pages' %}">Click to list all planner pages </a>
+
+  </div>
+  </div>
+{% endblock %}

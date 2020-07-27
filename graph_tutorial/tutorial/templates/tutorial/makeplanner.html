@@ -1,0 +1,8 @@
+{% extends "tutorial/layout.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Generate a Digital Planner</h1>
+  <p class="lead">Press the button below to generate a planner</p>
+  <a class="btn btn-primary btn-large {% if request.resolver_match.view_name == 'get_planner' %} active{% endif %}" href="{% url 'get_planner' %}">Click to generate planner (TODO: change my function)</a>
+  </div>
+{% endblock %}
